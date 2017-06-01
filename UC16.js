@@ -4,8 +4,8 @@
  *
  */
 function findNumber(numId, typeId) {
-    var nume = document.getElementById(numId).value;
-    var typee = document.getElementById(typeId).value;
+    var num = document.getElementById(numId).value;
+    var type = document.getElementById(typeId).value;
     var httpRequest = new XMLHttpRequest();
     httpRequest.onreadystatechange = function () {
         if (this.readyState === 4) {
@@ -22,7 +22,7 @@ function findNumber(numId, typeId) {
         else {
         }
     };
-    var url = "http://numbersapi.com/" + nume + "/" + typee;
+    var url = "http://numbersapi.com/" + num + "/" + type;
 
     httpRequest.open("GET", url, true);
     httpRequest.send();
